@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TenXHouse – Creative Hub for South African Entrepreneurs</title>
+  <meta name="description" content="Business address, bookkeeping, and growth support for creatives in Linden, Johannesburg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-orange': '#F7941E',
+            'brand-green': '#488341',
+            'brand-black': '#222',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in forwards',
+            'slide-down': 'slideDown 0.4s ease-out forwards'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideDown: {
+              '0%': { transform: 'translateY(-20px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(34,34,34,0.85) 0%, rgba(34,34,34,0.75) 100%);
+    }
+    
+    .brand-btn {
+      background: #F7941E;
+      color: #222;
+      transition: all 0.3s ease;
+    }
+    
+    .brand-btn:hover {
+      background: #488341;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .brand-outline {
+      border: 2px solid #F7941E;
+      color: #F7941E;
+      transition: all 0.3s ease;
+    }
+    
+    .brand-outline:hover {
+      background: #F7941E;
+      color: #222;
+      transform: translateY(-2px);
+    }
+    
+    .testimonial-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .pricing-card {
+      transition: all 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    
+    .featured-badge {
+      top: -12px;
+      right: 20px;
+    }
+    
+    .form-input:focus {
+      border-color: #F7941E;
+      box-shadow: 0 0 0 3px rgba(247, 148, 30, 0.2);
+    }
+    
+    .lead-magnet-bg {
+      background: linear-gradient(120deg, #488341 0%, #F7941E 100%);
+    }
+    
+    .checklist-item::before {
+      content: "✓";
+      color: #488341;
+      font-weight: bold;
+      display: inline-block;
+      width: 1.5em;
+      margin-left: -1.5em;
+    }
+    
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .back-to-top.show {
+      opacity: 1;
+    }
+    
+    .whatsapp-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+    }
+    
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #F7941E;
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+    
+    .mobile-menu.open {
+      max-height: 500px;
+    }
+    
+    .hamburger div {
+      transition: all 0.3s ease;
+    }
+    
+    .hamburger.open .top {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.open .middle {
+      opacity: 0;
+    }
+    
+    .hamburger.open .bottom {
+      transform: rotate(-45deg) translate(7px, -8px);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+    
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    /* Enhanced Services Section Styles */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #F7941E, #488341);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 2;
+      transition: all 0.4s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+    
+    .service-1 .service-icon {
+      background: linear-gradient(135deg, rgba(247, 148, 30, 0.15) 0%, rgba(247, 148, 30, 0.3) 100%);
+      color: #F7941E;
+    }
+    
+    .service-2 .service-icon {
+      background: linear-gradient(135deg, rgba(72, 131, 65, 0.15) 0%, rgba(72, 131, 65, 0.3) 100%);
+      color: #488341;
+    }
+    
+    .service-3 .service-icon {
+      background: linear-gradient(135deg, rgba(34, 34, 34, 0.15) 0%, rgba(34, 34, 34, 0.3) 100%);
+      color: #222;
+    }
+    
+    .service-feature {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 12px;
+    }
+    
+    .service-feature::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+    }
+    
+    .service-1 .service-feature::before {
+      background: #F7941E;
+    }
+    
+    .service-2 .service-feature::before {
+      background: #488341;
+    }
+    
+    .service-3 .service-feature::before {
+      background: #222;
+    }
+    
+    .services-illustration {
+      background: linear-gradient(135deg, rgba(247, 148, 30, 0.1) 0%, rgba(72, 131, 65, 0.1) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      height: 100%;
+    }
+    
+    .services-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #F7941E;
+      color: white;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/27821234567" target="_blank" class="whatsapp-button bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all">
+    <i class="fab fa-whatsapp text-white text-2xl"></i>
+  </a>
+  
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top bg-brand-black text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-brand-orange transition-all">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Header with functional navigation -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="#" class="flex items-center">
+          <div class="bg-brand-black text-white font-bold text-xl px-3 py-2 rounded">
+            <span class="text-brand-orange">TEN</span><span class="text-brand-green">X</span>HOUSE
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="font-medium text-brand-black hover:text-brand-orange nav-link">Home</a>
+          <a href="#services" class="font-medium text-brand-black hover:text-brand-orange nav-link">Services</a>
+          <a href="#pricing" class="font-medium text-brand-black hover:text-brand-orange nav-link">Pricing</a>
+          <a href="#testimonials" class="font-medium text-brand-black hover:text-brand-orange nav-link">Testimonials</a>
+          <a href="#contact" class="font-medium text-brand-black hover:text-brand-orange nav-link">Contact</a>
+        </nav>
+        
+        <div class="flex items-center space-x-4">
+          <a href="tel:+27111234567" class="hidden lg:flex items-center text-brand-black hover:text-brand-orange">
+            <i class="fas fa-phone mr-2"></i>
+            <span>+27 11 123 4567</span>
+          </a>
+          <a href="#contact" class="brand-btn px-5 py-2 rounded font-semibold hidden md:block">Book a Tour</a>
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuButton" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between">
+            <div class="top bg-brand-black h-1 rounded w-full"></div>
+            <div class="middle bg-brand-black h-1 rounded w-full"></div>
+            <div class="bottom bg-brand-black h-1 rounded w-full"></div>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu md:hidden bg-white shadow-lg rounded-b-lg">
+        <div class="flex flex-col py-4 px-4 space-y-4">
+          <a href="#home" class="font-medium text-brand-black hover:text-brand-orange py-2 border-b border-gray-100">Home</a>
+          <a href="#services" class="font-medium text-brand-black hover:text-brand-orange py-2 border-b border-gray-100">Services</a>
+          <a href="#pricing" class="font-medium text-brand-black hover:text-brand-orange py-2 border-b border-gray-100">Pricing</a>
+          <a href="#testimonials" class="font-medium text-brand-black hover:text-brand-orange py-2 border-b border-gray-100">Testimonials</a>
+          <a href="#contact" class="font-medium text-brand-black hover:text-brand-orange py-2">Contact</a>
+          <a href="#contact" class="brand-btn px-5 py-2 rounded font-semibold text-center mt-4">Book a Tour</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative pt-32 pb-24 md:pt-40 md:pb-32 flex items-center" style="background: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-2xl animate-fadeIn">
+        <div class="flex items-center mb-6">
+          <div class="h-1 w-12 bg-brand-orange mr-4"></div>
+          <span class="text-white font-semibold tracking-widest">CREATIVE BUSINESS HUB</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+          Where <span class="text-brand-orange">Creators</span> Formalise<br>and <span class="text-brand-green">Thrive</span>
+        </h1>
+        <p class="text-xl text-white mb-10 max-w-xl">
+          Premium business address, bookkeeping, and growth support for creatives and entrepreneurs at 74 5th Avenue, Linden.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#pricing" class="brand-btn px-8 py-4 rounded-lg font-bold shadow-lg text-lg">See Pricing</a>
+          <a href="#contact" class="brand-outline px-8 py-4 rounded-lg font-bold text-lg">Book a Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Trusted by Creatives & Entrepreneurs</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We proudly support South Africa's most innovative creators and businesses</p>
+      </div>
+      
+      <!-- Logos Grid -->
+      <div class="logo-grid max-w-6xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">TenOne</div>
+            <div class="text-sm text-gray-500">Venture Group</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Xcolab</div>
+            <div class="text-sm text-gray-500">Africa</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Printa LA</div>
+            <div class="text-sm text-gray-500">Creative Studio</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Congrads</div>
+            <div class="text-sm text-gray-500">Design Agency</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Socializa</div>
+            <div class="text-sm text-gray-500">Marketing</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Duma Kude</div>
+            <div class="text-sm text-gray-500">Consulting</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">realActivationX</div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm flex items-center justify-center h-24">
+          <div class="text-center">
+            <div class="text-xl font-bold text-brand-black">Velala</div>
+            <div class="text-sm text-gray-500">Fashion</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Media Badges -->
+      <div class="flex flex-wrap justify-center gap-6 mt-12">
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm flex items-center">
+          <i class="fas fa-star text-brand-orange mr-2"></i>
+          <span>As featured in Business Day</span>
+        </div>
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm flex items-center">
+          <i class="fas fa-handshake text-brand-green mr-2"></i>
+          <span>Partner: Xcolab Africa</span>
+        </div>
+        <div class="bg-white px-6 py-3 rounded-lg shadow-sm flex items-center">
+          <i class="fas fa-trophy text-brand-orange mr-2"></i>
+          <span>2024 Top Creative Hub in JHB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Services Section -->
+  <section id="services" class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-20">
+        <div class="inline-flex items-center bg-brand-green bg-opacity-10 text-brand-green px-6 py-2 rounded-full mb-6">
+          <span>Essential Support for Creatives</span>
+        </div>
+        <h2 class="text-4xl font-bold mb-6">All-in-One Business Support</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          We provide the essential services South African creatives need to formalize, operate, and grow their businesses
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Service Card 1 -->
+        <div class="service-card service-1 bg-white rounded-2xl shadow-md p-8 animate-fadeIn delay-100">
+          <div class="services-badge">Most Popular</div>
+          <div class="service-icon">
+            <i class="fas fa-map-marker-alt text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Professional Business Address</h3>
+          <p class="text-gray-600 mb-6 text-center">
+            Establish credibility with our premium Linden address for all your business correspondence and registrations.
+          </p>
+          
+          <div class="mb-8">
+            <h4 class="font-bold mb-4 text-lg">Key Features:</h4>
+            <ul class="space-y-3">
+              <li class="service-feature">Official registered address with CIPC</li>
+              <li class="service-feature">Mail handling & forwarding</li>
+              <li class="service-feature">Access to meeting rooms</li>
+              <li class="service-feature">Receptionist service during business hours</li>
+              <li class="service-feature">Professional business registration support</li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <a href="#contact" class="inline-block brand-btn px-8 py-3 rounded-lg font-bold">Get Started</a>
+          </div>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="service-card service-2 bg-white rounded-2xl shadow-md p-8 animate-fadeIn delay-200">
+          <div class="service-icon">
+            <i class="fas fa-calculator text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Expert Bookkeeping</h3>
+          <p class="text-gray-600 mb-6 text-center">
+            Compliant financial management tailored for creative businesses in South Africa.
+          </p>
+          
+          <div class="mb-8">
+            <h4 class="font-bold mb-4 text-lg">What's Included:</h4>
+            <ul class="space-y-3">
+              <li class="service-feature">Monthly financial statements</li>
+              <li class="service-feature">VAT submissions to SARS</li>
+              <li class="service-feature">Tax-ready records for your accountant</li>
+              <li class="service-feature">Expense tracking and invoicing</li>
+              <li class="service-feature">Payroll processing support</li>
+              <li class="service-feature">Annual financial statement preparation</li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <a href="#contact" class="inline-block brand-outline px-8 py-3 rounded-lg font-bold">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="service-card service-3 bg-white rounded-2xl shadow-md p-8 animate-fadeIn delay-300">
+          <div class="service-icon">
+            <i class="fas fa-chart-line text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center">Growth Support</h3>
+          <p class="text-gray-600 mb-6 text-center">
+            Strategic guidance to help your creative business scale sustainably.
+          </p>
+          
+          <div class="mb-8">
+            <h4 class="font-bold mb-4 text-lg">Growth Services:</h4>
+            <ul class="space-y-3">
+              <li class="service-feature">Quarterly business strategy sessions</li>
+              <li class="service-feature">Access to our investor network</li>
+              <li class="service-feature">Marketing & branding advice</li>
+              <li class="service-feature">Exclusive workshops and events</li>
+              <li class="service-feature">Networking with fellow creatives</li>
+              <li class="service-feature">Business development resources</li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <a href="#contact" class="inline-block brand-btn px-8 py-3 rounded-lg font-bold">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service Benefits -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mt-24">
+        <div class="services-illustration">
+          <div class="text-center">
+            <div class="bg-white rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-lightbulb text-brand-orange text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Why South African Creatives Choose Us</h3>
+            <p class="text-gray-600 mb-6">
+              We understand the unique challenges faced by creative entrepreneurs in Johannesburg and across South Africa.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="stat-card">
+                <div class="text-brand-green text-3xl font-bold mb-2">97%</div>
+                <div class="text-sm">Client Retention</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-brand-green text-3xl font-bold mb-2">500+</div>
+                <div class="text-sm">Creative Businesses</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-brand-green text-3xl font-bold mb-2">R5M+</div>
+                <div class="text-sm">Funds Raised</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-brand-green text-3xl font-bold mb-2">12</div>
+                <div class="text-sm">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Comprehensive Support for Creative Entrepreneurs</h3>
+          <p class="text-gray-600 mb-8">
+            At TenXHouse, we go beyond basic business services to provide holistic support for South African creatives. Our approach combines practical business tools with creative community building to help you thrive.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 rounded-full bg-brand-green bg-opacity-10 flex items-center justify-center">
+                  <i class="fas fa-users text-brand-green text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Community & Networking</h4>
+                <p class="text-gray-600">Join our vibrant community of like-minded creatives for collaboration and support.</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 rounded-full bg-brand-orange bg-opacity-10 flex items-center justify-center">
+                  <i class="fas fa-graduation-cap text-brand-orange text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Educational Workshops</h4>
+                <p class="text-gray-600">Monthly workshops on topics from financial literacy to digital marketing.</p>
+              </div>
+            </div>
+            
+            <div class="flex">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 rounded-full bg-brand-black bg-opacity-10 flex items-center justify-center">
+                  <i class="fas fa-briefcase text-brand-black text-xl"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Professional Development</h4>
+                <p class="text-gray-600">Resources and coaching to help you grow both creatively and professionally.</p>
+              </div>
+            </div>
+            
+            <div class="mt-8">
+              <a href="#contact" class="inline-flex items-center brand-btn px-6 py-3 rounded-lg font-bold">
+                <span>Book a Consultation</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">What Our Community Says</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Hear from South African creatives who have formalized and grown with TenXHouse</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold text-xl">SN</div>
+            <div class="ml-4">
+              <h4 class="font-bold">Sarah N.</h4>
+              <p class="text-brand-orange">Founder, Printa LA</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"TenXHouse gave my creative business the professional foundation it needed. Their bookkeeping service saved me hours each month and helped me secure my first big client."</p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-xl">DK</div>
+            <div class="ml-4">
+              <h4 class="font-bold">David K.</h4>
+              <p class="text-brand-orange">Creative Director, Socializa</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"The growth consultations at TenXHouse transformed my freelance work into a sustainable agency. Their advice on SA business regulations was invaluable."</p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-white p-8 rounded-2xl shadow-sm">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-full bg-brand-black text-white flex items-center justify-center font-bold text-xl">LM</div>
+            <div class="ml-4">
+              <h4 class="font-bold">Lerato M.</h4>
+              <p class="text-brand-orange">Artist & Entrepreneur</p>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4 italic">"As an artist, the business side overwhelmed me. TenXHouse handled everything from my business registration to tax compliance, so I could focus on creating."</p>
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Flexible Business Support Tiers</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Choose the package that fits your creative business needs</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Tier 1 -->
+        <div class="pricing-card bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-200">
+          <h3 class="text-2xl font-bold mb-2">Tier 1</h3>
+          <p class="text-gray-600 mb-6">For freelancers & new startups</p>
+          <div class="text-3xl font-bold mb-6">R750<span class="text-lg font-normal">/month</span></div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Registered Business Address</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Basic Admin Support</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Basic Bookkeeping</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-times mr-3"></i>
+              <span>Growth Advice</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-times mr-3"></i>
+              <span>Monthly Consultation</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center brand-outline py-3 rounded-lg font-bold">Get Started</a>
+        </div>
+        
+        <!-- Tier 2 -->
+        <div class="pricing-card bg-white p-8 rounded-2xl shadow-lg border-2 border-brand-orange relative">
+          <div class="featured-badge absolute bg-brand-orange text-white px-4 py-1 rounded-full font-bold">POPULAR</div>
+          <h3 class="text-2xl font-bold mb-2">Tier 2</h3>
+          <p class="text-gray-600 mb-6">For growing businesses</p>
+          <div class="text-3xl font-bold mb-6">R1,500<span class="text-lg font-normal">/month</span></div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Registered Business Address</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Full Admin Support</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Full Bookkeeping</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Quarterly Growth Advice</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-times mr-3"></i>
+              <span>Monthly Consultation</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
+        </div>
+        
+        <!-- Tier 3 -->
+        <div class="pricing-card bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-200">
+          <h3 class="text-2xl font-bold mb-2">Tier 3</h3>
+          <p class="text-gray-600 mb-6">For scaling & creative businesses</p>
+          <div class="text-3xl font-bold mb-6">R3,000<span class="text-lg font-normal">/month</span></div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Registered Business Address</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Priority Admin Support</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Advanced Bookkeeping</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Monthly Growth Advice</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle text-brand-green mr-3"></i>
+              <span>Monthly Consultation</span>
+            </li>
+          </ul>
+          <a href="#contact" class="block text-center brand-outline py-3 rounded-lg font-bold">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Magnet Section -->
+  <section class="py-16 lead-magnet-bg text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Download Our Free Guide:<br>5 Financial Mistakes South African Startups Make</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Avoid common pitfalls and set your creative business up for success with our expert financial guide.</p>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto text-left text-gray-800 mb-8">
+          <h3 class="font-bold text-xl mb-4">What You'll Learn:</h3>
+          <ul class="space-y-3 checklist-item pl-6">
+            <li>How to properly register your business in South Africa</li>
+            <li>VAT registration thresholds and requirements</li>
+            <li>Common bookkeeping mistakes that trigger SARS audits</li>
+            <li>Setting aside the right amount for taxes</li>
+            <li>Financial planning for seasonal creative businesses</li>
+          </ul>
+        </div>
+        
+        <form class="max-w-lg mx-auto">
+          <div class="mb-4">
+            <input type="email" placeholder="Your Email Address" class="w-full px-5 py-4 rounded-lg border-0 shadow focus:ring-2 focus:ring-brand-orange">
+          </div>
+          <button type="submit" class="brand-btn w-full py-4 rounded-lg font-bold text-lg">Download Free Guide</button>
+          <p class="text-sm mt-3 opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">Visit Our Creative Hub</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Schedule a tour of our Linden space and discover how we can support your creative business</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Book a Tour</h3>
+            <form class="space-y-4">
+              <div>
+                <input type="text" placeholder="Your Name" class="form-input w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none">
+              </div>
+              <div>
+                <input type="email" placeholder="Email Address" class="form-input w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none">
+              </div>
+              <div>
+                <input type="tel" placeholder="Phone Number" class="form-input w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none">
+              </div>
+              <div>
+                <select class="form-input w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none">
+                  <option disabled selected>Interested In</option>
+                  <option>Tier 1: Basic Support</option>
+                  <option>Tier 2: Growth Support</option>
+                  <option>Tier 3: Premium Support</option>
+                  <option>Just a Tour</option>
+                </select>
+              </div>
+              <div>
+                <textarea placeholder="Message (Optional)" rows="4" class="form-input w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none"></textarea>
+              </div>
+              <button type="submit" class="brand-btn w-full py-4 rounded-lg font-bold">Request Tour</button>
+            </form>
+          </div>
+          
+          <!-- Location Info -->
+          <div>
+            <div class="bg-gray-100 p-6 rounded-2xl mb-8">
+              <h4 class="font-bold text-lg mb-4">TenXHouse Location</h4>
+              <div class="flex items-start mb-4">
+                <i class="fas fa-map-marker-alt text-brand-orange mt-1 mr-3"></i>
+                <p>74 5th Avenue<br>Linden, Johannesburg<br>2195, South Africa</p>
+              </div>
+              <div class="flex items-center mb-4">
+                <i class="fas fa-clock text-brand-orange mr-3"></i>
+                <p>Monday-Friday: 8:30 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-brand-orange mr-3"></i>
+                <p>+27 11 123 4567</p>
+              </div>
+            </div>
+            
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+                <p class="text-gray-500">Linden Location Map</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-black py-12 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="bg-brand-black text-white font-bold text-xl px-3 py-2 rounded inline-block mb-4">
+            <span class="text-brand-orange">TEN</span><span class="text-brand-green">X</span>HOUSE
+          </div>
+          <p class="text-gray-400 mb-4">Supporting South African creatives to formalize, grow, and thrive.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-brand-orange"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-orange"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-orange"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-brand-orange"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-brand-orange">Home</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-brand-orange">Services</a></li>
+            <li><a href="#pricing" class="text-gray-400 hover:text-brand-orange">Pricing</a></li>
+            <li><a href="#testimonials" class="text-gray-400 hover:text-brand-orange">Testimonials</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-brand-orange">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-brand-orange">Business Address</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand-orange">Bookkeeping</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand-orange">Tax Compliance</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand-orange">Growth Support</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-brand-orange">Meeting Spaces</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-orange"></i>
+              <span>74 5th Avenue, Linden<br>Johannesburg, 2195</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-brand-orange"></i>
+              <span>+27 11 123 4567</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-brand-orange"></i>
+              <span>hello@tenxhouse.co.za</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <a href="privacy.html" class="hover:text-brand-orange">Privacy (POPIA)</a>
+          <a href="terms.html" class="hover:text-brand-orange">Terms & Conditions</a>
+          <a href="faq.html" class="hover:text-brand-orange">FAQs</a>
+        </div>
+        <p>&copy; 2025 TenXHouse. All rights reserved. Reg. No: 2025/123456/07</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenuButton.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuButton.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+    
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Smooth scrolling for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Add animation to elements when they enter viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fadeIn');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.testimonial-card, .pricing-card, .featured-badge, .service-card').forEach((el, index) => {
+      el.classList.add(`delay-${(index % 3) * 100}`);
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
