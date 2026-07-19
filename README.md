@@ -25,13 +25,27 @@ The branch contains:
 - no unapproved pricing, discount or legal claims;
 - disabled operational CTAs until approved Creator/HubSpot URLs are configured;
 - `noindex,nofollow` so the preview is not treated as production content;
-- an operating-model document, Creator blueprint and implementation backlog.
+- an operating-model document, Creator blueprint, implementation backlog, release gate, service/package/benefit ledger and validation records.
 
 ## Documentation
 
 - `docs/WEBSITE-OPERATING-MODEL.md`
 - `docs/ZOHO-CREATOR-BLUEPRINT.md`
 - `docs/IMPLEMENTATION-BACKLOG.md`
+- `docs/WEBSITE-RELEASE-GATE.md`
+- `docs/SERVICE-PACKAGE-BENEFIT-LEDGER.md`
+- `docs/PHASE1-VALIDATION-REPORT.md`
+- `docs/GITHUB-ONEDRIVE-ALIGNMENT-CHECKLIST.md`
+
+## GitHub and OneDrive release rule
+
+Always build through GitHub and OneDrive before deploying to the main domain.
+
+- GitHub controls source code, branches, pull requests, deployment history and technical review evidence.
+- OneDrive controls handoff files, source documents, business approvals, release records and test evidence exports.
+- If GitHub and OneDrive disagree, production deployment is blocked.
+- Do not deploy local-only changes to the main TenXHouse domain.
+- Keep preview branches and previews `noindex,nofollow` until final business, commercial, legal and technical approval.
 
 ## Integration rule
 
@@ -55,6 +69,7 @@ Do not merge the feature branch to `main` until:
 - events and registration routes are approved;
 - all Creator and HubSpot destinations are working;
 - POPIA/privacy and membership terms are approved;
+- WhatsApp, phone, public address and email details are approved;
 - accessibility, mobile, analytics and end-to-end workflow QA pass.
 
 The existing GitHub Pages workflow deploys the repository root when changes are pushed to `main`.
