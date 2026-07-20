@@ -16,9 +16,9 @@ This repository is being rebuilt around the corrected TenXHouse business model.
 
 `feat/tenxhouse-operating-model-v2`
 
-The branch contains:
+The branch currently contains:
 
-- a new, responsive one-page implementation preview;
+- a responsive one-page implementation preview;
 - corrected positioning and explicit market exclusions;
 - sections for Membership, Member Benefits, Hosted Companies, Resources and Events;
 - a Zoho Creator-led membership workflow;
@@ -26,6 +26,20 @@ The branch contains:
 - disabled operational CTAs until approved Creator/HubSpot URLs are configured;
 - `noindex,nofollow` so the preview is not treated as production content;
 - an operating-model document, Creator blueprint, implementation backlog, release gate, service/package/benefit ledger and validation records.
+
+## Preferred next direction
+
+As of 2026-07-20, the preferred direction is the current OneDrive working-site style rather than the stripped-down one-page GitHub preview.
+
+The next GitHub implementation should preserve the preferred OneDrive direction:
+
+- practical landing-page flow;
+- visible package-card section;
+- business-address and support positioning;
+- forms, insights, events, contact, FAQ, privacy and terms pages;
+- stronger conversion routes.
+
+This must still remain draft/preview-only until commercial, legal and contact details are approved. The WhatsApp number is pending a new SIM card and must not be treated as final.
 
 ## Documentation
 
@@ -36,6 +50,7 @@ The branch contains:
 - `docs/SERVICE-PACKAGE-BENEFIT-LEDGER.md`
 - `docs/PHASE1-VALIDATION-REPORT.md`
 - `docs/GITHUB-ONEDRIVE-ALIGNMENT-CHECKLIST.md`
+- `docs/PREFERRED-WEBSITE-DIRECTION.md`
 
 ## GitHub and OneDrive release rule
 
