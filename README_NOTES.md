@@ -1,4 +1,4 @@
-﻿# TenXHouse Website Notes
+# TenXHouse Website Notes
 
 ## Public Form Experience
 

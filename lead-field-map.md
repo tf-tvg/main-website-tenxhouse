@@ -1,4 +1,4 @@
-﻿# TenXHouse Lead CSV Field Map
+# TenXHouse Lead CSV Field Map
 
 Use this map when building the Zoho Creator app or importing to HubSpot CRM.
 
