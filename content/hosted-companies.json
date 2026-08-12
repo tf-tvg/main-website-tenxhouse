@@ -1,0 +1,58 @@
+[
+  {
+    "id": "TXH-HC-001",
+    "name": "TenOne Venture Group",
+    "role": "Hosted company and ecosystem contributor",
+    "description": "",
+    "website_url": "",
+    "member_offer": "",
+    "governance": {
+      "approval_status": "Draft",
+      "visibility": "hidden",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-HC-002",
+    "name": "Xcolab Africa",
+    "role": "Hosted company and operating-rigour contributor",
+    "description": "",
+    "website_url": "",
+    "member_offer": "",
+    "governance": {
+      "approval_status": "Draft",
+      "visibility": "hidden",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-HC-003",
+    "name": "PrintaLa",
+    "role": "Hosted company and print-and-brand-collateral contributor",
+    "description": "",
+    "website_url": "",
+    "member_offer": "",
+    "governance": {
+      "approval_status": "Draft",
+      "visibility": "hidden",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-HC-004",
+    "name": "KaMuntu",
+    "role": "Hosted company; public profile pending",
+    "description": "",
+    "website_url": "",
+    "member_offer": "",
+    "governance": {
+      "approval_status": "Draft",
+      "visibility": "hidden",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  }
+]

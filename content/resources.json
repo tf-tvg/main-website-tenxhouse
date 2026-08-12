@@ -1,0 +1,134 @@
+[
+  {
+    "id": "TXH-RES-001",
+    "slug": "virtual-office-address-readiness",
+    "title": "What to prepare before applying for a virtual office address",
+    "category": "Business Presence",
+    "excerpt": "A practical readiness checklist for company details, director information, supporting documents and operating needs.",
+    "source_type": "TenXHouse guide",
+    "source_url": "",
+    "read_time_minutes": 4,
+    "publication_date": "2026-07-08",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": true,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-RES-002",
+    "slug": "admin-habits-for-credibility",
+    "title": "Admin habits that help small businesses stay credible",
+    "category": "Operations",
+    "excerpt": "Simple routines, records and response times that make a young business feel more professional.",
+    "source_type": "TenXHouse guide",
+    "source_url": "",
+    "read_time_minutes": 4,
+    "publication_date": "2026-07-06",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": false,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-RES-003",
+    "slug": "events-for-local-entrepreneurs",
+    "title": "Why events matter for local entrepreneurs and creatives",
+    "category": "Community",
+    "excerpt": "Workshops and practical networking can give founders the feedback loops they often miss.",
+    "source_type": "TenXHouse guide",
+    "source_url": "",
+    "read_time_minutes": 4,
+    "publication_date": "2026-07-02",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": false,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-RES-004",
+    "slug": "credible-business-presence",
+    "title": "A credible business presence changes how people respond to your offer",
+    "category": "Business Presence",
+    "excerpt": "A short note on trust signals, address readiness and formal communication.",
+    "source_type": "LinkedIn",
+    "source_url": "",
+    "read_time_minutes": 3,
+    "publication_date": "2026-07-08",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": false,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-RES-005",
+    "slug": "systems-protect-creative-momentum",
+    "title": "Creative businesses need systems that protect momentum",
+    "category": "Operations",
+    "excerpt": "Why admin routines, records and follow-ups are part of the creative engine.",
+    "source_type": "LinkedIn",
+    "source_url": "",
+    "read_time_minutes": 3,
+    "publication_date": "2026-07-05",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": false,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-RES-006",
+    "slug": "local-rooms-for-business-growth",
+    "title": "Local rooms can move small businesses faster",
+    "category": "Community",
+    "excerpt": "A perspective on events, practical introductions and shared learning.",
+    "source_type": "LinkedIn",
+    "source_url": "",
+    "read_time_minutes": 3,
+    "publication_date": "2026-07-01",
+    "author": "APPROVAL REQUIRED",
+    "reviewer": "APPROVAL REQUIRED",
+    "source_ledger_url": "",
+    "featured": false,
+    "sections": [],
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "TXH-PKG-001",
+    "name": "Presence",
+    "audience": "Freelancers, creatives and new startups",
+    "description": "For freelancers, creatives and new startups that need a credible business base.",
+    "monthly_price_zar": 795,
+    "includes": [
+      "Professional Business Address",
+      "Starter Admin Support",
+      "Starter Bookkeeping Support"
+    ],
+    "excludes": [
+      "Growth Advice",
+      "Monthly Consultation"
+    ],
+    "featured": false,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-PKG-002",
+    "name": "Connect",
+    "audience": "Growing businesses",
+    "description": "For growing businesses that need stronger admin, records and operating structure.",
+    "monthly_price_zar": 1595,
+    "includes": [
+      "Professional Business Address",
+      "Full Admin Support",
+      "Full Bookkeeping",
+      "Quarterly Growth Advice"
+    ],
+    "excludes": [
+      "Monthly Consultation"
+    ],
+    "featured": true,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-PKG-003",
+    "name": "Operate",
+    "audience": "Scaling teams",
+    "description": "For scaling teams that need priority support and more consistent growth conversations.",
+    "monthly_price_zar": 3950,
+    "includes": [
+      "Professional Business Address",
+      "Priority Admin Support",
+      "Advanced Bookkeeping",
+      "Monthly Growth Advice",
+      "Monthly Consultation"
+    ],
+    "excludes": [],
+    "featured": false,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  }
+]

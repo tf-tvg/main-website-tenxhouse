@@ -1,0 +1,341 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: create {path}"
+      update: "content: update {path}"
+      delete: "content: delete {path}"
+      rename: "content: rename {oldPath} to {newPath}"
+
+components:
+  governance:
+    type: object
+    label: Publication controls
+    fields:
+      - name: approval_status
+        label: Approval status
+        type: select
+        required: true
+        options:
+          values:
+            - Draft
+            - Approved for internal testing
+            - Approved for public launch
+            - Paused
+            - Retired
+      - name: visibility
+        label: Visibility
+        type: select
+        required: true
+        description: Preview records appear only away from the production domain. Public records also require public-launch approval.
+        options:
+          values:
+            - hidden
+            - preview
+            - public
+      - name: approval_owner
+        label: Approval owner
+        type: string
+        required: true
+      - name: review_date
+        label: Review date
+        type: date
+        default: ""
+        options:
+          format: yyyy-MM-dd
+
+content:
+  - name: commercial
+    label: Commercial content
+    type: group
+    items:
+      - name: packages
+        label: Membership packages
+        type: file
+        path: content/packages.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: Package ID
+            type: string
+            required: true
+            pattern: "^TXH-PKG-[0-9]{3}$"
+          - name: name
+            type: string
+            required: true
+          - name: audience
+            type: text
+            required: true
+          - name: description
+            type: text
+            required: true
+          - name: monthly_price_zar
+            label: Monthly price (ZAR)
+            type: number
+            required: true
+            options:
+              min: 0
+          - name: includes
+            type: string
+            list:
+              min: 1
+          - name: excludes
+            type: string
+            list: true
+          - name: featured
+            type: boolean
+          - name: governance
+            component: governance
+      - name: hosted_companies
+        label: Hosted companies
+        type: file
+        path: content/hosted-companies.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: Company ID
+            type: string
+            required: true
+            pattern: "^TXH-HC-[0-9]{3}$"
+          - name: name
+            type: string
+            required: true
+          - name: role
+            type: text
+            required: true
+          - name: description
+            type: text
+          - name: website_url
+            label: Website URL
+            type: string
+          - name: member_offer
+            label: Approved member offer
+            type: text
+          - name: governance
+            component: governance
+
+      - name: benefits
+        label: Member benefits
+        type: file
+        path: content/benefits.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: Benefit ID
+            type: string
+            required: true
+            pattern: "^TXH-BEN-[0-9]{3}$"
+          - name: provider
+            type: string
+            required: true
+          - name: summary
+            type: text
+            required: true
+          - name: qualifying_package
+            type: string
+            required: true
+          - name: valid_from
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: valid_to
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: claim_route
+            type: string
+            description: Public portal route only. Never place a private token or discount code here.
+          - name: key_terms
+            type: text
+            required: true
+          - name: governance
+            component: governance
+
+  - name: editorial
+    label: Editorial content
+    type: group
+    items:
+      - name: resources
+        label: Insights and resources
+        type: file
+        path: content/resources.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: Resource ID
+            type: string
+            required: true
+            pattern: "^TXH-RES-[0-9]{3}$"
+          - name: slug
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: title
+            type: string
+            required: true
+          - name: category
+            type: string
+            required: true
+          - name: excerpt
+            type: text
+            required: true
+          - name: source_type
+            type: select
+            required: true
+            options:
+              values:
+                - TenXHouse guide
+                - LinkedIn
+                - External
+          - name: source_url
+            label: Published source URL
+            type: string
+          - name: read_time_minutes
+            type: number
+            options:
+              min: 1
+          - name: publication_date
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: author
+            type: string
+            required: true
+          - name: reviewer
+            type: string
+            required: true
+          - name: source_ledger_url
+            label: Source ledger URL
+            type: string
+            description: Link to the governed SharePoint or OneDrive source ledger; do not paste private source content here.
+          - name: featured
+            type: boolean
+          - name: sections
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{heading}"
+            fields:
+              - name: heading
+                type: string
+              - name: paragraphs
+                type: text
+                list: true
+          - name: governance
+            component: governance
+
+      - name: events
+        label: Events
+        type: file
+        path: content/events.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: Event ID
+            type: string
+            required: true
+            pattern: "^TXH-EVT-[0-9]{3}$"
+          - name: slug
+            type: string
+            required: true
+            pattern: "^[a-z0-9-]+$"
+          - name: name
+            type: string
+            required: true
+          - name: summary
+            type: text
+            required: true
+          - name: organiser
+            type: string
+            required: true
+          - name: format
+            type: select
+            required: true
+            options:
+              values:
+                - In person
+                - Online
+                - Hybrid
+          - name: location
+            type: string
+          - name: starts_at
+            type: date
+            default: ""
+            options:
+              time: true
+              format: yyyy-MM-dd'T'HH:mm
+          - name: ends_at
+            type: date
+            default: ""
+            options:
+              time: true
+              format: yyyy-MM-dd'T'HH:mm
+          - name: price_zar
+            label: Price (ZAR)
+            type: number
+            options:
+              min: 0
+          - name: member_benefit
+            type: text
+          - name: registration_url
+            type: string
+          - name: cancellation_terms
+            type: text
+          - name: event_status
+            type: select
+            required: true
+            options:
+              values:
+                - Idea
+                - Scheduled
+                - Registration open
+                - Registration closed
+                - Completed
+                - Cancelled
+                - Archived
+          - name: governance
+            component: governance
+
+      - name: faqs
+        label: FAQs
+        type: file
+        path: content/faqs.json
+        format: json
+        list: true
+        fields:
+          - name: id
+            label: FAQ ID
+            type: string
+            required: true
+            pattern: "^TXH-FAQ-[0-9]{3}$"
+          - name: question
+            type: string
+            required: true
+          - name: answer
+            type: text
+            required: true
+          - name: category
+            type: string
+            required: true
+          - name: sort_order
+            type: number
+            required: true
+            options:
+              min: 0
+          - name: governance
+            component: governance
