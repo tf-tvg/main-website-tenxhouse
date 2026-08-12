@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights | TenXHouse</title>
   <meta name="description" content="Practical TenXHouse insights for entrepreneurs, creatives and small businesses in South Africa on business presence, admin, money routines and growth.">
+  <meta name="robots" content="noindex,nofollow">
   <link rel="canonical" href="https://tenxhouse.co.za/insights.html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +40,7 @@
     .page-hero { background:linear-gradient(90deg, rgba(34,34,34,.9), rgba(34,34,34,.72)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat; }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900" data-content-page="insights">
   <header class="fixed w-full bg-white shadow-md z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
@@ -59,7 +60,7 @@
         </nav>
         <div class="flex items-center space-x-4">
           <a href="forms.html?type=General%20Enquiry" class="brand-btn px-5 py-2 rounded font-semibold hidden md:block">Contact Us</a>
-          <button id="mobileMenuButton" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between">
+          <button id="mobileMenuButton" type="button" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
             <div class="top bg-brand-black h-1 rounded w-full"></div>
             <div class="middle bg-brand-black h-1 rounded w-full"></div>
             <div class="bottom bg-brand-black h-1 rounded w-full"></div>
@@ -102,61 +103,26 @@
           <h2 class="text-4xl font-bold mb-4">Practical Reads</h2>
           <p class="text-gray-600 max-w-2xl">Short, useful pieces that help small businesses look credible, operate cleaner and make better next moves.</p>
         </div>
-        <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8">
-          <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all">
-            <div class="bg-brand-black text-white p-8 md:p-10">
-              <p class="text-brand-orange font-semibold mb-3">Business Presence | 8 July 2026</p>
-              <h3 class="text-3xl md:text-4xl font-bold mb-4">What to prepare before applying for a virtual office address</h3>
-              <p class="text-gray-200">A practical readiness checklist for company details, director information, supporting documents and operating needs.</p>
-            </div>
-            <div class="p-8 flex items-center justify-between">
-              <span class="text-gray-600">4 min read</span>
-              <span class="font-bold text-brand-orange">Read article <i class="fas fa-arrow-right ml-1"></i></span>
-            </div>
-          </a>
-          <div class="grid gap-6">
-            <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 p-7 hover:shadow-lg transition-all">
-              <p class="text-sm text-brand-green font-semibold mb-2">Operations | 6 July 2026</p>
-              <h3 class="text-2xl font-bold mb-3">Admin habits that help small businesses stay credible</h3>
-              <p class="text-gray-600 mb-4">Simple routines, records and response times that make a young business feel more professional.</p>
-              <span class="font-bold text-brand-orange">Read article <i class="fas fa-arrow-right ml-1"></i></span>
-            </a>
-            <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 p-7 hover:shadow-lg transition-all">
-              <p class="text-sm text-brand-green font-semibold mb-2">Community | 2 July 2026</p>
-              <h3 class="text-2xl font-bold mb-3">Why events matter for local entrepreneurs and creatives</h3>
-              <p class="text-gray-600 mb-4">Workshops and practical networking can give founders the feedback loops they often miss.</p>
-              <span class="font-bold text-brand-orange">Read article <i class="fas fa-arrow-right ml-1"></i></span>
-            </a>
+        <div id="resourceGuides" class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8">
+          <div class="lg:col-span-2 border border-gray-200 bg-gray-50 p-8 text-center rounded-lg" aria-live="polite">
+            <h3 class="text-2xl font-bold mb-3">Useful resources are in review</h3>
+            <p class="text-gray-600">Approved, source-reviewed guides will appear here as they are cleared for publication.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-16 bg-gray-50">
+    <section id="linkedinSection" class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
           <div>
             <p class="text-brand-green font-semibold tracking-widest uppercase mb-3">LinkedIn Dispatch</p>
             <h2 class="text-3xl font-bold">Latest from LinkedIn</h2>
           </div>
-          <a href="#" class="font-bold text-brand-orange hover:text-brand-green">View LinkedIn articles <i class="fas fa-arrow-right ml-1"></i></a>
+          <span class="font-semibold text-gray-500" title="LinkedIn page pending approval">LinkedIn page pending approval</span>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all">
-            <p class="text-sm text-gray-500 mb-3">LinkedIn | 8 July 2026</p>
-            <h3 class="text-xl font-bold mb-3">A credible business presence changes how people respond to your offer</h3>
-            <p class="text-gray-600">A short note on trust signals, address readiness and formal communication.</p>
-          </a>
-          <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all">
-            <p class="text-sm text-gray-500 mb-3">LinkedIn | 5 July 2026</p>
-            <h3 class="text-xl font-bold mb-3">Creative businesses need systems that protect momentum</h3>
-            <p class="text-gray-600">Why admin routines, records and follow-ups are part of the creative engine.</p>
-          </a>
-          <a href="#" class="block bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition-all">
-            <p class="text-sm text-gray-500 mb-3">LinkedIn | 1 July 2026</p>
-            <h3 class="text-xl font-bold mb-3">Local rooms can move small businesses faster</h3>
-            <p class="text-gray-600">A perspective on events, practical introductions and shared learning.</p>
-          </a>
+        <div id="linkedinResources" class="grid md:grid-cols-3 gap-6">
+          <p class="md:col-span-3 border border-gray-200 bg-white p-6 text-center text-gray-600 rounded-lg" aria-live="polite">Approved LinkedIn resources will appear here.</p>
         </div>
       </div>
     </section>
@@ -233,13 +199,19 @@
     mobileMenuButton.addEventListener('click', () => {
       mobileMenuButton.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      const isOpen = mobileMenu.classList.contains('open');
+      mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuButton.classList.remove('open');
         mobileMenu.classList.remove('open');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
       });
     });
   </script>
+  <script src="assets/js/cms-content.js"></script>
 </body>
 </html>

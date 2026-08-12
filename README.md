@@ -26,6 +26,9 @@ The branch currently contains:
 - disabled operational CTAs until approved Creator/HubSpot URLs are configured;
 - `noindex,nofollow` so the preview is not treated as production content;
 - an operating-model document, Creator blueprint, implementation backlog, release gate, service/package/benefit ledger and validation records.
+- a Git-backed Pages CMS configuration and structured catalogues for packages, resources, events, FAQs, hosted companies and benefits;
+- a publication guard that separates preview-approved content from production-approved content;
+- automated structured-content validation for feature branches and pull requests.
 
 ## Preferred next direction
 
@@ -51,6 +54,20 @@ This must still remain draft/preview-only until commercial, legal and contact de
 - `docs/PHASE1-VALIDATION-REPORT.md`
 - `docs/GITHUB-ONEDRIVE-ALIGNMENT-CHECKLIST.md`
 - `docs/PREFERRED-WEBSITE-DIRECTION.md`
+- `docs/CMS-ARCHITECTURE.md`
+- `docs/CMS-FOUNDATION-QA-2026-08-12.md`
+
+## Editorial CMS
+
+Pages CMS provides the editing interface for public-safe website content stored in this repository. The CMS does not hold leads, member records, payments, benefit claims, agreements or private documents.
+
+- Editor configuration: `.pages.yml`
+- Structured content: `content/`
+- Local validation: `node scripts/validate-content.mjs`
+- Static-site validation: `node scripts/validate-site.mjs`
+- Operating and activation guide: `docs/CMS-ARCHITECTURE.md`
+
+Use the feature branch for CMS editing while the website remains in preview. A merge to `main` remains the production deployment gate.
 
 ## GitHub and OneDrive release rule
 

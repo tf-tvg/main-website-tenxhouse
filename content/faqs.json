@@ -1,0 +1,67 @@
+[
+  {
+    "id": "TXH-FAQ-001",
+    "question": "What is TenXHouse?",
+    "answer": "TenXHouse helps entrepreneurs, creatives and local businesses in Linden look credible, stay organised and grow with practical support.",
+    "category": "About TenXHouse",
+    "sort_order": 10,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-FAQ-002",
+    "question": "Can I use TenXHouse as a business address?",
+    "answer": "You can enquire about professional business address support. Required documents, package limits and address use rules are confirmed before onboarding.",
+    "category": "Business presence",
+    "sort_order": 20,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-FAQ-003",
+    "question": "Are bookkeeping and tax services included?",
+    "answer": "Bookkeeping support may be available, but exact transaction limits, SARS submissions, tax advice and annual financial statement scope must be confirmed in writing.",
+    "category": "Services",
+    "sort_order": 30,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-FAQ-004",
+    "question": "How do I become a partner or sponsor?",
+    "answer": "Use the partner or sponsor enquiry route and tell us what value you can bring to entrepreneurs, creatives or local business owners.",
+    "category": "Partners",
+    "sort_order": 40,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  },
+  {
+    "id": "TXH-FAQ-005",
+    "question": "How do event RSVPs work?",
+    "answer": "Join the event interest list and TenXHouse will share dates, capacity and RSVP details when sessions open.",
+    "category": "Events",
+    "sort_order": 50,
+    "governance": {
+      "approval_status": "Approved for internal testing",
+      "visibility": "preview",
+      "approval_owner": "Nhlakanipho Shange",
+      "review_date": ""
+    }
+  }
+]

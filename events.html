@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | TenXHouse</title>
   <meta name="description" content="TenXHouse events, workshops, launches and community sessions for entrepreneurs, creatives and local businesses in Linden, Johannesburg.">
+  <meta name="robots" content="noindex,nofollow">
   <link rel="canonical" href="https://tenxhouse.co.za/events.html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +40,7 @@
     .page-hero { background:linear-gradient(90deg, rgba(34,34,34,.9), rgba(34,34,34,.72)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat; }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900" data-content-page="events">
   <header class="fixed w-full bg-white shadow-md z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
@@ -59,7 +60,7 @@
         </nav>
         <div class="flex items-center space-x-4">
           <a href="forms.html?type=General%20Enquiry" class="brand-btn px-5 py-2 rounded font-semibold hidden md:block">Contact Us</a>
-          <button id="mobileMenuButton" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between">
+          <button id="mobileMenuButton" type="button" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
             <div class="top bg-brand-black h-1 rounded w-full"></div>
             <div class="middle bg-brand-black h-1 rounded w-full"></div>
             <div class="bottom bg-brand-black h-1 rounded w-full"></div>
@@ -96,7 +97,7 @@
     </section>
 
     <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
+      <div id="eventsContent" class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center bg-white rounded-2xl shadow-sm border border-gray-100 p-10 md:p-14">
           <div class="w-20 h-20 rounded-full bg-brand-orange bg-opacity-10 flex items-center justify-center mx-auto mb-6">
             <i class="fas fa-calendar-check text-brand-orange text-3xl"></i>
@@ -188,13 +189,19 @@
     mobileMenuButton.addEventListener('click', () => {
       mobileMenuButton.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      const isOpen = mobileMenu.classList.contains('open');
+      mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuButton.classList.remove('open');
         mobileMenu.classList.remove('open');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
       });
     });
   </script>
+  <script src="assets/js/cms-content.js"></script>
 </body>
 </html>

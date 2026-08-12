@@ -1,0 +1,25 @@
+name: Validate structured content
+
+on:
+  pull_request:
+  push:
+    branches-ignore:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate CMS catalogues
+        run: node scripts/validate-content.mjs
+      - name: Validate preview site
+        run: node scripts/validate-site.mjs

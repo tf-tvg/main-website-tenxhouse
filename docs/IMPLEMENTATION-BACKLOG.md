@@ -1,5 +1,19 @@
 # TenXHouse Website Implementation Backlog
 
+## Current execution status
+
+| Build area | Status | Evidence / next gate |
+|---|---|---|
+| Repository and responsive baseline | Complete for current feature preview | Local desktop/mobile QA and commit `bfc9afe` |
+| Design-system refactor | Pending | Extract shared CSS/JS and remove Tailwind production CDN |
+| Structured content models | Complete locally; review pending | `.pages.yml`, six catalogues, safe renderer, preview/production gates and validation |
+| CMS-backed public routes | Complete locally; approval pending | Packages, Insights, Events and FAQs pass desktop/mobile QA; see `CMS-FOUNDATION-QA-2026-08-12.md` |
+| CMS activation | Pending owner approval | Install Pages CMS GitHub App for this repository only and test on the feature branch |
+| Zoho Creator preparation | Blueprint complete; implementation pending | Confirm fields, roles, packages, terms and public-feed contract |
+| Membership, benefits, resources and events | Approval-dependent | Complete approved service/package/benefit ledger and source records |
+| HubSpot and lead submission | Pending | Approve form/adapter route and property mapping |
+| Legal, analytics and production release | Blocked | Complete approval and release gates |
+
 ## P0 — factual and risk corrections
 
 | Task | Acceptance criteria | Primary tool |

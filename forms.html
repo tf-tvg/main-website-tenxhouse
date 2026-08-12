@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Your TenXHouse Enquiry | TenXHouse</title>
   <meta name="description" content="Start a TenXHouse enquiry for professional business address support, admin help, bookkeeping support, partnerships, sponsorships, events or community updates.">
-  <meta name="robots" content="noindex,follow">
+  <meta name="robots" content="noindex,nofollow">
   <link rel="canonical" href="https://tenxhouse.co.za/forms.html">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,7 +41,7 @@
     .form-input:focus { border-color:#F7941E; box-shadow:0 0 0 3px rgba(247,148,30,.18); outline:none; }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900" data-content-page="forms">
   <header class="fixed w-full bg-white shadow-md z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center py-4">
@@ -61,7 +61,7 @@
         </nav>
         <div class="flex items-center space-x-4">
           <a href="forms.html?type=General%20Enquiry" class="brand-btn px-5 py-2 rounded font-semibold hidden md:block">Contact Us</a>
-          <button id="mobileMenuButton" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between">
+          <button id="mobileMenuButton" type="button" class="md:hidden text-brand-black hamburger w-8 h-8 flex flex-col justify-between" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
             <div class="top bg-brand-black h-1 rounded w-full"></div>
             <div class="middle bg-brand-black h-1 rounded w-full"></div>
             <div class="bottom bg-brand-black h-1 rounded w-full"></div>
@@ -122,12 +122,9 @@
                 <div>
                   <label class="block font-semibold mb-2" for="package_interest">Package interest</label>
                   <select id="package_interest" name="package_interest" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
-                    <option value="">Not sure yet</option>
-                    <option>Presence - R795/month</option>
-                    <option>Connect - R1,595/month</option>
-                    <option>Operate - R3,950/month</option>
-                    <option>Partner / Sponsor / Event</option>
-                    <option>Community / Mailing List</option>
+                    <option value="" data-static-option>Not sure yet</option>
+                    <option data-static-option>Partner / Sponsor / Event</option>
+                    <option data-static-option>Community / Mailing List</option>
                   </select>
                 </div>
               </div>
@@ -323,16 +320,22 @@
     mobileMenuButton.addEventListener('click', () => {
       mobileMenuButton.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      const isOpen = mobileMenu.classList.contains('open');
+      mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuButton.classList.remove('open');
         mobileMenu.classList.remove('open');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
       });
     });
 
     setDefaultsFromUrl();
     setLeads(getLeads());
   </script>
+  <script src="assets/js/cms-content.js"></script>
 </body>
 </html>

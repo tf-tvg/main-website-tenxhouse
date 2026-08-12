@@ -25,11 +25,11 @@ Do not show internal controls such as:
 
 Those are operational details and should stay out of the customer journey.
 
-## Current Static HTML Preview
+## Current GitHub-Backed Static Site
 
-The static HTML version can pre-fill enquiry type and package from URL parameters. Because it is a static file preview, it cannot reliably submit to a live CRM by itself.
+The GitHub-backed static site is the canonical website implementation. It can pre-fill enquiry type and package from URL parameters. Because browser-only code must not contain private CRM or Creator credentials, live lead submission still requires an approved published form or a protected server-side adapter.
 
-For production, use the Astro version in `03_Website/tenxhouse-astro`, which includes a server-side `/api/leads` endpoint.
+Do not switch production work to the separate Astro folder unless a later architecture decision explicitly approves that migration.
 
 ## Production Lead Workflow
 
@@ -41,10 +41,10 @@ submitted_at,enquiry_type,package_interest,full_name,business_name,email,mobile_
 
 Recommended production route:
 
-1. Visitor submits the clean public enquiry form.
-2. `/api/leads` validates the submission.
-3. The lead is forwarded through `LEAD_WEBHOOK_URL` to Zoho Creator, Zoho Forms, HubSpot, Zoho Flow, Make, Zapier, or a secure backend.
-4. CRM/app automation handles internal CSV export, routing, tagging, notifications, and follow-up.
+1. Visitor submits the clean public enquiry form or an approved embedded form.
+2. The approved form provider or protected server-side adapter validates the submission.
+3. The lead is forwarded to Zoho Creator and/or HubSpot using credentials that never enter browser code.
+4. CRM/app automation handles routing, tagging, notifications and follow-up.
 
 ## Form Page SEO
 
@@ -62,4 +62,4 @@ Insights should read like a professional editorial/blog page, not a generic comp
 - Supporting practical reads
 - Latest LinkedIn articles
 
-The current links can remain `#` until the CMS and article detail pages are built. When the CMS is added, keep fields for title, category, publish date, excerpt, read time, featured status and source.
+The CMS catalogue keeps title, category, publication date, excerpt, read time, featured status, source, author, reviewer, source ledger and publication controls. Links remain non-interactive until an approved article or external source URL exists.

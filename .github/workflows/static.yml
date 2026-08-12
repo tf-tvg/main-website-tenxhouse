@@ -31,6 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate CMS catalogues
+        run: node scripts/validate-content.mjs
+      - name: Validate production site
+        run: node scripts/validate-site.mjs --production
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
