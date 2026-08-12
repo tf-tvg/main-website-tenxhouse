@@ -60,6 +60,10 @@
       font-family: 'Inter', Arial, sans-serif;
       scroll-behavior: smooth;
     }
+
+    section[id] {
+      scroll-margin-top: 76px;
+    }
     
     .hero-overlay {
       background: linear-gradient(90deg, rgba(34,34,34,0.85) 0%, rgba(34,34,34,0.75) 100%);
@@ -142,6 +146,12 @@
     
     .back-to-top.show {
       opacity: 1;
+    }
+
+    @media (max-width: 639px) {
+      #backToTop {
+        display: none;
+      }
     }
     
     .whatsapp-button {
@@ -472,11 +482,11 @@
       </div>
       
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Tier 1 -->
+        <!-- Presence -->
         <div class="pricing-card bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="text-2xl font-bold mb-2">Tier 1</h3>
+          <h3 class="text-2xl font-bold mb-2">Presence</h3>
           <p class="text-gray-600 mb-6">For freelancers, creatives and new startups that need a credible business base.</p>
-          <div class="text-3xl font-bold mb-6">R750<span class="text-lg font-normal">/month</span></div>
+          <div class="text-3xl font-bold mb-6">R795<span class="text-lg font-normal">/month</span></div>
           <ul class="space-y-4 mb-8">
             <li class="flex items-center">
               <i class="fas fa-check-circle text-brand-green mr-3"></i>
@@ -500,17 +510,17 @@
             </li>
           </ul>
           <div class="space-y-3">
-            <a href="forms.html?type=Business%20Support&package=Tier%201%20-%20Starter%20Presence%20-%20R750%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
-            <a href="forms.html?type=Business%20Support&package=Tier%201%20-%20Starter%20Presence%20-%20R750%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
+            <a href="forms.html?type=Business%20Support&package=Presence%20-%20R795%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
+            <a href="forms.html?type=Business%20Support&package=Presence%20-%20R795%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
           </div>
         </div>
         
-        <!-- Tier 2 -->
+        <!-- Connect -->
         <div class="pricing-card bg-white p-8 rounded-2xl shadow-lg border-2 border-brand-orange relative">
           <div class="featured-badge absolute bg-brand-orange text-white px-4 py-1 rounded-full font-bold">POPULAR</div>
-          <h3 class="text-2xl font-bold mb-2">Tier 2</h3>
+          <h3 class="text-2xl font-bold mb-2">Connect</h3>
           <p class="text-gray-600 mb-6">For growing businesses that need stronger admin, records and operating structure.</p>
-          <div class="text-3xl font-bold mb-6">R1,500<span class="text-lg font-normal">/month</span></div>
+          <div class="text-3xl font-bold mb-6">R1,595<span class="text-lg font-normal">/month</span></div>
           <ul class="space-y-4 mb-8">
             <li class="flex items-center">
               <i class="fas fa-check-circle text-brand-green mr-3"></i>
@@ -534,16 +544,16 @@
             </li>
           </ul>
           <div class="space-y-3">
-            <a href="forms.html?type=Business%20Support&package=Tier%202%20-%20Growth%20Support%20-%20R1%2C500%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
-            <a href="forms.html?type=Business%20Support&package=Tier%202%20-%20Growth%20Support%20-%20R1%2C500%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
+            <a href="forms.html?type=Business%20Support&package=Connect%20-%20R1%2C595%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
+            <a href="forms.html?type=Business%20Support&package=Connect%20-%20R1%2C595%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
           </div>
         </div>
         
-        <!-- Tier 3 -->
+        <!-- Operate -->
         <div class="pricing-card bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="text-2xl font-bold mb-2">Tier 3</h3>
+          <h3 class="text-2xl font-bold mb-2">Operate</h3>
           <p class="text-gray-600 mb-6">For scaling teams that need priority support and more consistent growth conversations.</p>
-          <div class="text-3xl font-bold mb-6">R3,000<span class="text-lg font-normal">/month</span></div>
+          <div class="text-3xl font-bold mb-6">R3,950<span class="text-lg font-normal">/month</span></div>
           <ul class="space-y-4 mb-8">
             <li class="flex items-center">
               <i class="fas fa-check-circle text-brand-green mr-3"></i>
@@ -567,8 +577,8 @@
             </li>
           </ul>
           <div class="space-y-3">
-            <a href="forms.html?type=Business%20Support&package=Tier%203%20-%20Premium%20Support%20-%20R3%2C000%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
-            <a href="forms.html?type=Business%20Support&package=Tier%203%20-%20Premium%20Support%20-%20R3%2C000%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
+            <a href="forms.html?type=Business%20Support&package=Operate%20-%20R3%2C950%2Fmonth" class="block text-center brand-btn py-3 rounded-lg font-bold">Get Started</a>
+            <a href="forms.html?type=Business%20Support&package=Operate%20-%20R3%2C950%2Fmonth" class="block text-center brand-outline py-3 rounded-lg font-bold">Ask More</a>
           </div>
         </div>
       </div>
