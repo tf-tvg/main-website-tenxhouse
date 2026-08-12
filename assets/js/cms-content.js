@@ -1,7 +1,13 @@
 (function () {
   "use strict";
 
-  const PREVIEW_HOSTS = new Set(["localhost", "127.0.0.1", "::1", "raw.githack.com"]);
+  const PREVIEW_HOSTS = new Set([
+    "localhost",
+    "127.0.0.1",
+    "::1",
+    "raw.githack.com",
+    "staging.tenxhouse.co.za"
+  ]);
   const PREVIEW_STATUSES = new Set([
     "Approved for internal testing",
     "Approved for public launch"

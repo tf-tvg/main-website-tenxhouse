@@ -76,6 +76,15 @@ for (const [file, html] of htmlByFile) {
   }
 }
 
+const robotsText = await readFile(path.join(root, 'robots.txt'), 'utf8');
+const blocksAllCrawlers = /^User-agent:\s*\*\s*$[\s\S]*^Disallow:\s*\/\s*$/im.test(robotsText);
+if (productionMode && blocksAllCrawlers) {
+  fail('robots.txt', 'preview-wide crawler block must be removed before production deployment');
+}
+if (!productionMode && !blocksAllCrawlers) {
+  fail('robots.txt', 'preview site must block all crawlers');
+}
+
 const cmsOnlyCommercialValues = ['R795/month', 'R1,595/month', 'R3,950/month'];
 for (const [file, html] of htmlByFile) {
   for (const value of cmsOnlyCommercialValues) {

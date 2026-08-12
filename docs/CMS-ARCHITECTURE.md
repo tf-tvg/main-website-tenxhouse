@@ -47,7 +47,7 @@ Every record has a `governance` object:
 
 The renderer applies two gates:
 
-1. Localhost and the approved RawGitHack preview host may display `preview` records approved for internal testing.
+1. Localhost, the approved RawGitHack preview host and `staging.tenxhouse.co.za` may display `preview` records approved for internal testing.
 2. Every other host, including GitHub Pages and the main domain, displays only `public` records with `Approved for public launch` status.
 
 The static HTML contains neutral empty states rather than unpublished catalogue copy. If the content request or renderer fails, the site therefore fails closed instead of exposing preview records.
